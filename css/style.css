@@ -1,0 +1,9 @@
+#movies{
+    background: #333;
+}
+
+.col-md-3{
+    display: flex;
+    justify-content: space-between;
+}
+
