@@ -1,4 +1,4 @@
-let button=document.querySelector('.btn').addEventListener('click',btnSearch);
+let button=document.querySelector('#submit').addEventListener('click',btnSearch);
 
 function btnSearch(e){
     e.preventDefault();
@@ -15,12 +15,12 @@ function btnSearch(e){
             let output='';
             response.Search.forEach(function(movie){
                 output+=`
-                    <div class="col-md-3 d-inline-block">
+                    <div class="col-md-3 d-inline-block ml-5 mr-4 mt-2">
                         <div class="card text-center">
                             <img src="${movie.Poster}" class="card-img-top">
                             <div class="card-body">
                                 <h5>${movie.Title}</h5>
-                                <a   class="btn btn-primary" onclick="movieSelected('${movie.imdbID}') href="#" >Movie Details</a>
+                                <a class="btn btn-primary" onclick="movieSelected('${movie.imdbID}')" href="#" >Movie Details</a>
                             </div>
                         </div>
                     </div>
@@ -34,3 +34,9 @@ function btnSearch(e){
     // console.log(searchText);
 
 }
+
+function movieSelected(id){
+    sessionStorage.setItem('movieId',id);
+    window.location='movie.html';
+}
+

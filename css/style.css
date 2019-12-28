@@ -7,3 +7,7 @@
     justify-content: space-between;
 }
 
+.card{
+    /* height:550px; */
+    width: 300px;
+}
